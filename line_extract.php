@@ -1,12 +1,11 @@
 #!/usr/bin/env php
 
 <?php
-
+$help = "\nUsage: line_extract.php [filename] [step]\n";
+$help .= "\n\tReads filename, and extracts every x line into another file.\n\n";
+$help .= "\n\tIf no step is specified, it defaults to 2.\n";
 if (isset($argv[1])) {
   if ($argv[1] == "--help") {
-    $help = "\nUsage: line_extract.php filename step\n";
-    $help .= "\n\tReads filename, and extracts every x line into another file.\n\n";
-    $help .= "\n\tIf no step is specified, it defaults to 2.\n";
     echo($help);
     exit();
   }
@@ -28,5 +27,5 @@ if (isset($argv[1])) {
   }
 }
 else {
-  echo("First parameter should be a file.\n");
+  echo($help . "\n");
 }
