@@ -23,7 +23,7 @@ if (isset($argv[1])) {
     for ($i = $step; $i < count($file); $i = $i + $step) {
       $new_file[] = $file[$i];
     }
-    file_put_contents($argv[1] . ".new", $new_file);
+    file_put_contents($argv[1] . ".new", implode($new_file));
   }
 }
 else {
