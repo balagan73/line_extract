@@ -1,7 +1,7 @@
 #!/usr/bin/env php
 
 <?php
-$help = "\nUsage: line_extract.php [filename] [step]\n";
+$help = "\nUsage: line_extract.php {filename} [step]\n";
 $help .= "\n\tReads filename, and extracts every x line into another file.\n\n";
 $help .= "\n\tIf no step is specified, it defaults to 2.\n";
 if (isset($argv[1])) {
